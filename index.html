@@ -5,17 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Interactive Letter — GitHub Pages</title>
   <style>
-    /* NOTE: Put your Georgia Pro Condensed font file in the same repo and update the src path below.
-       If you don't have Georgia Pro Condensed, it will fall back to Georgia.
-    */
-    @font-face {
-      font-family: 'GeorgiaProCondensedLocal';
-      src: url('./fonts/GeorgiaProCondensed.woff2') format('woff2'),
-           url('./fonts/GeorgiaProCondensed.woff') format('woff');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
+    /* นำเข้าฟอนต์ Fira Code จาก Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
     :root{
       --canvas-width: 1024px; /* adjust for higher resolution */
@@ -49,7 +40,7 @@
     }
 
     #nameText{
-      font-family: 'GeorgiaProCondensedLocal', Georgia, 'Times New Roman', serif;
+      font-family: 'Fira Code', 'Courier New', Courier, monospace;
       font-size: 56px; /* default size; user can change */
       line-height: 1;
       letter-spacing: 0.5px;
@@ -96,8 +87,8 @@
       <label for="yOffset">ตำแหน่งบน (px)</label>
       <input id="yOffset" type="range" min="0" max="400" value="150" />
 
-      <label for="fontFile">ใช้ฟอนต์ท้องถิ่น (ใส่ชื่อไฟล์ในโฟลเดอร์ /fonts)</label>
-      <div class="small">ถ้าคุณมี Georgia Pro Condensed ให้อัปโหลดไฟล์ .woff2 หรือ .woff ลงในโฟลเดอร์ <code>/fonts</code> แล้วตั้งชื่อเป็น <code>GeorgiaProCondensed.woff2</code></div>
+      <label for="fontFile">เกี่ยวกับฟอนต์ที่ใช้</label>
+      <div class="small">ระบบเปิดใช้งานฟอนต์ <code>Fira Code</code> ผ่านระบบ Google Fonts อัตโนมัติแล้ว</div>
 
       <button id="downloadBtn">ดาวน์โหลดเป็นรูป (PNG)</button>
       <div class="small">เคล็ดลับ: ปรับขนาด ภายใน และตำแหน่ง ให้ตรงกับคำว่า "Dear." ในภาพก่อนดาวน์โหลด</div>
